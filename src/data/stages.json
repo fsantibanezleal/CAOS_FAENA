@@ -1,0 +1,80 @@
+[
+  {
+    "id": "exploration",
+    "order": 0,
+    "labelEN": "Exploration & Geology",
+    "labelES": "Exploración y Geología"
+  },
+  {
+    "id": "mine-design",
+    "order": 1,
+    "labelEN": "Mine Design & Planning",
+    "labelES": "Diseño y Planificación Minera"
+  },
+  {
+    "id": "drill-blast",
+    "order": 2,
+    "labelEN": "Drill & Blast",
+    "labelES": "Perforación y Tronadura"
+  },
+  {
+    "id": "load-haul",
+    "order": 3,
+    "labelEN": "Load, Haul & Dispatch",
+    "labelES": "Carguío, Transporte y Despacho"
+  },
+  {
+    "id": "crushing",
+    "order": 4,
+    "labelEN": "Crushing & Comminution",
+    "labelES": "Chancado y Conminución"
+  },
+  {
+    "id": "processing",
+    "order": 5,
+    "labelEN": "Processing — Flotation / Leaching",
+    "labelES": "Procesamiento — Flotación / Lixiviación"
+  },
+  {
+    "id": "stockpiling",
+    "order": 6,
+    "labelEN": "Stockpiling & Blending",
+    "labelES": "Acopio y Mezcla"
+  },
+  {
+    "id": "tailings",
+    "order": 7,
+    "labelEN": "Tailings, Thickening & Water",
+    "labelES": "Relaves, Espesamiento y Agua"
+  },
+  {
+    "id": "geotechnics",
+    "order": 8,
+    "labelEN": "Geotechnics & Stability",
+    "labelES": "Geotecnia y Estabilidad"
+  },
+  {
+    "id": "asset-health",
+    "order": 9,
+    "labelEN": "Asset Health & Maintenance",
+    "labelES": "Salud de Activos y Mantención"
+  },
+  {
+    "id": "economics",
+    "order": 10,
+    "labelEN": "Commodity & Economics",
+    "labelES": "Commodities y Economía"
+  },
+  {
+    "id": "logistics",
+    "order": 11,
+    "labelEN": "Logistics",
+    "labelES": "Logística"
+  },
+  {
+    "id": "cross-cutting",
+    "order": 12,
+    "labelEN": "Cross-cutting",
+    "labelES": "Transversal"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cv",
+    "labelEN": "Computer Vision",
+    "labelES": "Visión Computacional",
+    "color": "#22b8cf",
+    "icon": "aperture"
+  },
+  {
+    "id": "sim",
+    "labelEN": "3D Simulation / Physics",
+    "labelES": "Simulación 3D / Física",
+    "color": "#7c5cff",
+    "icon": "atom"
+  },
+  {
+    "id": "twin",
+    "labelEN": "Digital Twin / Ontology",
+    "labelES": "Gemelo Digital / Ontología",
+    "color": "#12b8a6",
+    "icon": "share-2"
+  },
+  {
+    "id": "opt",
+    "labelEN": "Optimization / OR",
+    "labelES": "Optimización / IO",
+    "color": "#f59f00",
+    "icon": "git-merge"
+  },
+  {
+    "id": "cm",
+    "labelEN": "Condition Monitoring",
+    "labelES": "Monitoreo de Condición",
+    "color": "#f06595",
+    "icon": "activity"
+  },
+  {
+    "id": "geo",
+    "labelEN": "Geospatial / Remote Sensing",
+    "labelES": "Geoespacial / Teledetección",
+    "color": "#37b24d",
+    "icon": "map"
+  },
+  {
+    "id": "fc",
+    "labelEN": "Forecasting / Econometrics",
+    "labelES": "Pronóstico / Econometría",
+    "color": "#4263eb",
+    "icon": "trending-up"
+  },
+  {
+    "id": "viz",
+    "labelEN": "3D Viz / Mine Design",
+    "labelES": "Viz 3D / Diseño Minero",
+    "color": "#fd7e14",
+    "icon": "box"
+  }
+]

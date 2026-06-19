@@ -1,0 +1,17 @@
+---
+import Tile from './Tile.astro';
+import { stageLabel, type Lang } from '../i18n/ui';
+const { stage, apps, index, lang, collapsed } = Astro.props;
+const l = lang as Lang;
+---
+<section class="lane" data-lane data-stage={stage.id} data-collapsed={collapsed ? 'true' : 'false'}>
+  <div class="lane-head" data-lane-toggle role="button" tabindex="0" aria-label={stageLabel(stage, l)}>
+    <span class="num">{index}</span>
+    <h2>{stageLabel(stage, l)}</h2>
+    <span class="count" data-lane-count>({apps.length})</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="lane-grid">
+    {apps.map((a: any) => <Tile app={a} lang={l} />)}
+  </div>
+</section>

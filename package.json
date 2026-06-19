@@ -1,0 +1,19 @@
+{
+  "name": "caos-faena",
+  "version": "0.01.000",
+  "private": true,
+  "type": "module",
+  "description": "Faena — public mining-analytics hub: a launcher for a family of open mining web-apps.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.6.1",
+    "typescript": "^5.7.3"
+  }
+}

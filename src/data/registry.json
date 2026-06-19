@@ -1,0 +1,838 @@
+[
+  {
+    "slug": "corelog",
+    "name": "CoreLog Vision",
+    "oneliner": "Drop a drill-core tray image and get per-segment lithology classification with confidence and a depth-stitched strip log.",
+    "stage": "exploration",
+    "solutionType": "cv",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 2,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_CoreLog",
+      "docs": null
+    },
+    "featured": true,
+    "order": 0
+  },
+  {
+    "slug": "prospectmap",
+    "name": "ProspectMap",
+    "oneliner": "Didactic prospectivity app that stacks open geophysical/geochemical/structural evidence layers and computes weights-of-evidence prospectivity maps.",
+    "stage": "exploration",
+    "solutionType": "geo",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_ProspectMap",
+      "docs": null
+    },
+    "featured": true,
+    "order": 1
+  },
+  {
+    "slug": "blockscope",
+    "name": "BlockScope",
+    "oneliner": "Interactive 3D viewer for an orebody block model: cut sections, isosurface grade shells with cutoff sliders, color by element.",
+    "stage": "exploration",
+    "solutionType": "viz",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_BlockScope",
+      "docs": null
+    },
+    "featured": false,
+    "order": 2
+  },
+  {
+    "slug": "pitforge",
+    "name": "PitForge",
+    "oneliner": "Load an open block model, run Lerchs-Grossmann / pseudoflow ultimate-pit and nested pit shells in the browser, and explore phase designs in 3D.",
+    "stage": "mine-design",
+    "solutionType": "viz",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 2,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PitForge",
+      "docs": null
+    },
+    "featured": true,
+    "order": 3
+  },
+  {
+    "slug": "phaseflow",
+    "name": "PhaseFlow",
+    "oneliner": "Animate a year-by-year extraction schedule over the block model in 3D: pushbacks advance, NPV accrues and stockpile/waste balances update.",
+    "stage": "mine-design",
+    "solutionType": "viz",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PhaseFlow",
+      "docs": null
+    },
+    "featured": false,
+    "order": 4
+  },
+  {
+    "slug": "rampgraph",
+    "name": "RampGraph",
+    "oneliner": "Haul-road network design tool: given pit phases, dumps and a crusher, lays out and optimizes the ramp graph for minimum weighted haul cost.",
+    "stage": "mine-design",
+    "solutionType": "opt",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_RampGraph",
+      "docs": null
+    },
+    "featured": false,
+    "order": 5
+  },
+  {
+    "slug": "fragmentiq",
+    "name": "FragmentIQ",
+    "oneliner": "Upload a muckpile or conveyor-belt photo and get an instance-segmented particle-size distribution (P10/P50/P80, Rosin-Rammler fit).",
+    "stage": "drill-blast",
+    "solutionType": "cv",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 2,
+    "dataVerdict": {
+      "grade": "YELLOW",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_FragmentIQ",
+      "docs": null
+    },
+    "featured": true,
+    "order": 6
+  },
+  {
+    "slug": "fragmenta",
+    "name": "Fragmenta",
+    "oneliner": "Lay out a 3D blast pattern (burden, spacing, hole diameter, sub-drill, delay timing, rock factor) and get the predicted Kuz-Ram fragmentation curve.",
+    "stage": "drill-blast",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": "Validated vs Hudaverdi 97-blast dataset (local corpus, OA copy); reproduce 2012 Kuz-Ram R2=0.57 on 12 hold-out blasts"
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_Fragmenta",
+      "docs": null
+    },
+    "featured": false,
+    "order": 7
+  },
+  {
+    "slug": "ppvscope",
+    "name": "PPVScope",
+    "oneliner": "Blast ground-motion simulator: given charge-per-delay and geometry, predicts scaled-distance PPV and overlays USBM, Ambraseys-Hendron and Langefors-Kihlstrom laws.",
+    "stage": "drill-blast",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PPVScope",
+      "docs": null
+    },
+    "featured": false,
+    "order": 8
+  },
+  {
+    "slug": "dispatchlab",
+    "name": "DispatchLab",
+    "oneliner": "Benchmark real-time truck-to-shovel dispatch policies (greedy, shortest-queue, MILP assignment) on a simulated pit and compare tonnes, queue time and match factor.",
+    "stage": "load-haul",
+    "solutionType": "opt",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 1,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_DispatchLab",
+      "docs": null
+    },
+    "featured": true,
+    "order": 9
+  },
+  {
+    "slug": "semhaul",
+    "name": "SemHaul",
+    "oneliner": "Semantic haul-fleet twin: road graph, sectors (phase/dump/crusher), trucks and shifts modeled as RDF so dispatch what-ifs are explainable queries (didactic haul traceability, not Veta-style in-plant production tracking).",
+    "stage": "load-haul",
+    "solutionType": "twin",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_SemHaul",
+      "docs": null
+    },
+    "featured": false,
+    "order": 10
+  },
+  {
+    "slug": "fleetmatch",
+    "name": "FleetMatch",
+    "oneliner": "Fleet-sizing and shovel-truck matching optimizer: finds the truck count and allocation that maximizes tonnes per dollar given match factor.",
+    "stage": "load-haul",
+    "solutionType": "opt",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_FleetMatch",
+      "docs": null
+    },
+    "featured": false,
+    "order": 11
+  },
+  {
+    "slug": "haulgraph",
+    "name": "HaulGraph",
+    "oneliner": "Extracts the haul-road graph inside a mine footprint from Sentinel-2 + Copernicus DEM and classifies segments by along-road grade.",
+    "stage": "load-haul",
+    "solutionType": "geo",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_HaulGraph",
+      "docs": null
+    },
+    "featured": false,
+    "order": 12
+  },
+  {
+    "slug": "throughputcast",
+    "name": "ThroughputCast",
+    "oneliner": "Transparent plant-throughput and fleet-availability forecaster: fits SARIMA/state-space + reliability models to historical production/availability series and back-tests rolling forecasts with prediction intervals.",
+    "stage": "load-haul",
+    "solutionType": "fc",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_ThroughputCast",
+      "docs": null
+    },
+    "featured": false,
+    "order": 13
+  },
+  {
+    "slug": "trayectore",
+    "name": "TrayectOre",
+    "oneliner": "Design a belt-to-belt transfer in 3D: set belt speed, pulley diameter, incline, material and chute geometry and trace the discharge trajectory.",
+    "stage": "load-haul",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_TrayectOre",
+      "docs": null
+    },
+    "featured": false,
+    "order": 14
+  },
+  {
+    "slug": "chancadem",
+    "name": "ChancaDEM",
+    "oneliner": "Browser 3D viewer of a cone/jaw crusher chamber where you set eccentric speed, throw, closed-side-setting and feed PSD and watch product gradation form.",
+    "stage": "crushing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 2,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_ChancaDEM",
+      "docs": null
+    },
+    "featured": true,
+    "order": 15
+  },
+  {
+    "slug": "chargecascade",
+    "name": "ChargeCascade",
+    "oneliner": "Interactive 3D tumbling mill (SAG/ball/rod): set diameter, fill %, ball size distribution and speed fraction and watch the charge transition cascading->cataracting->centrifuging across the full fraction-of-critical-speed range with live power-draw.",
+    "stage": "processing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_ChargeCascade",
+      "docs": null
+    },
+    "featured": true,
+    "order": 16
+  },
+  {
+    "slug": "frothseg",
+    "name": "FrothSeg",
+    "oneliner": "In-browser bubble segmentation of flotation froth images (watershed baseline + distilled SAM2/Mask-R-CNN mask head) producing the bubble-size-distribution, with a built-in synthetic-froth benchmark mode for mask validation.",
+    "stage": "processing",
+    "solutionType": "cv",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_FrothSeg",
+      "docs": null
+    },
+    "featured": true,
+    "order": 17
+  },
+  {
+    "slug": "heappercola",
+    "name": "HeapPercola",
+    "oneliner": "Column-to-heap leaching reactive-transport explorer: sweep particle size, irrigation rate, acid concentration and lift height to see recovery-vs-time, with a preferential-flow/channeling and wetting-front overlay.",
+    "stage": "processing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_HeapPercola",
+      "docs": null
+    },
+    "featured": false,
+    "order": 18
+  },
+  {
+    "slug": "concviewer",
+    "name": "ConcViewer",
+    "oneliner": "Descriptive auditable digital twin of a copper concentrator + thickener: solves the steady-state mass/metal/water balance with full stream provenance, no setpoints (pedagogy/audit only, explicitly NOT a Veta-style in-plant tracker).",
+    "stage": "processing",
+    "solutionType": "twin",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_ConcViewer",
+      "docs": null
+    },
+    "featured": false,
+    "order": 19
+  },
+  {
+    "slug": "goraink",
+    "name": "GorainK",
+    "oneliner": "Teaching simulator of the Gorain-Finch-Dobby k=P*Sb*Rf/4 relationship: drive superficial gas velocity Jg, Sauter bubble diameter and froth-phase recovery Rf (with a froth-drainage/coalescence layer) and watch the rate constant respond.",
+    "stage": "processing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_GorainK",
+      "docs": null
+    },
+    "featured": false,
+    "order": 20
+  },
+  {
+    "slug": "popbalancefloat",
+    "name": "PopBalanceFloat",
+    "oneliner": "Build a feed as a distribution of floatabilities (fast/slow/non-floating), run it through batch kinetics and a multi-cell bank and read recovery-time curves.",
+    "stage": "processing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PopBalanceFloat",
+      "docs": null
+    },
+    "featured": false,
+    "order": 21
+  },
+  {
+    "slug": "sxthiele",
+    "name": "SXThiele",
+    "oneliner": "Interactive McCabe-Thiele SX-circuit builder: set isotherm, O/A ratio and number of extraction/strip stages and watch the operating line step out.",
+    "stage": "processing",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_SXThiele",
+      "docs": null
+    },
+    "featured": false,
+    "order": 22
+  },
+  {
+    "slug": "blendlp",
+    "name": "BlendLP",
+    "oneliner": "Linear-program blending planner that decides how much to draw from each stockpile/face to hit a target ROM feed grade at minimum cost.",
+    "stage": "stockpiling",
+    "solutionType": "opt",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_BlendLP",
+      "docs": null
+    },
+    "featured": false,
+    "order": 23
+  },
+  {
+    "slug": "stocktwin",
+    "name": "StockTwin",
+    "oneliner": "Didactic near-real-time 3D stockpile that grows and erodes as synthetic haul trucks deposit and reclaim loads, tracking each cell's origin grade for reclaim traceability (open-pit stockpile pedagogy, NOT plant-level mineral tracking).",
+    "stage": "stockpiling",
+    "solutionType": "viz",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_StockTwin",
+      "docs": null
+    },
+    "featured": false,
+    "order": 24
+  },
+  {
+    "slug": "tailwatch",
+    "name": "TailWatch",
+    "oneliner": "Loads open Sentinel-1 InSAR time-series over a mine's tailings dams and pit walls and runs LiCSBAS-style SBAS displacement to surface millimetric deformation.",
+    "stage": "tailings",
+    "solutionType": "geo",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 1,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_TailWatch",
+      "docs": null
+    },
+    "featured": true,
+    "order": 25
+  },
+  {
+    "slug": "fluxthicken",
+    "name": "FluxThicken",
+    "oneliner": "Interactive Kynch/Coe-Clevenger flux-theory thickener: drop a batch-settling curve and watch characteristic lines and shock/rarefaction structures form.",
+    "stage": "tailings",
+    "solutionType": "sim",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_FluxThicken",
+      "docs": null
+    },
+    "featured": false,
+    "order": 26
+  },
+  {
+    "slug": "slopepulse",
+    "name": "SlopePulse",
+    "oneliner": "Slope-deformation time-series alerting on prism/slope-radar displacement: inverse-velocity (Fukuzono) failure-time projection plus trend/acceleration thresholds for tiered alarms.",
+    "stage": "geotechnics",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_SlopePulse",
+      "docs": null
+    },
+    "featured": false,
+    "order": 27
+  },
+  {
+    "slug": "rotorvitals",
+    "name": "RotorVitals",
+    "oneliner": "Upload or pick a real vibration trace from a crusher/conveyor drive bearing and get an explainable inner/outer-race/ball fault diagnosis with envelope-spectrum evidence.",
+    "stage": "asset-health",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 1,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_RotorVitals",
+      "docs": null
+    },
+    "featured": true,
+    "order": 28
+  },
+  {
+    "slug": "fractalwear",
+    "name": "FractalWear",
+    "oneliner": "Detect the transition from healthy to wear/degradation by tracking fractal dimension and Hurst exponent (DFA, box-counting) on real vibration traces.",
+    "stage": "asset-health",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_FractalWear",
+      "docs": null
+    },
+    "featured": false,
+    "order": 29
+  },
+  {
+    "slug": "motormcsa",
+    "name": "MotorMCSA",
+    "oneliner": "Sensorless fault detection on the stator-current spectrum of a fixed-plant induction motor (crusher/conveyor/pump drive) via MCSA sidebands.",
+    "stage": "asset-health",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 3,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_MotorMCSA",
+      "docs": null
+    },
+    "featured": false,
+    "order": 30
+  },
+  {
+    "slug": "prognosrul",
+    "name": "PrognosRUL",
+    "oneliner": "Run-to-failure replay viewer: extract a degradation health indicator (RMS, kurtosis, spectral kurtosis, Hurst) from real bearing data and estimate remaining useful life.",
+    "stage": "asset-health",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PrognosRUL",
+      "docs": null
+    },
+    "featured": false,
+    "order": 31
+  },
+  {
+    "slug": "assetonto",
+    "name": "AssetOntoTwin",
+    "oneliner": "IOF/BFO-grounded knowledge graph of a haul-truck fleet (components to failure modes to sensor channels to work orders) for explainable FMEA reasoning.",
+    "stage": "asset-health",
+    "solutionType": "twin",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_AssetOntoTwin",
+      "docs": null
+    },
+    "featured": false,
+    "order": 32
+  },
+  {
+    "slug": "gearcepstrum",
+    "name": "GearCepstrum",
+    "oneliner": "Cepstrum + Time-Synchronous-Averaging viewer isolating gear-mesh harmonics and sidebands to flag tooth cracks and wear in gearboxes/drivetrains.",
+    "stage": "asset-health",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_GearCepstrum",
+      "docs": null
+    },
+    "featured": false,
+    "order": 33
+  },
+  {
+    "slug": "cutoffgrade",
+    "name": "CutoffGrade Studio",
+    "oneliner": "Interactive implementation of Lane's economic definition of ore: feed a grade-tonnage curve plus price, costs and capacities and find the optimal cutoff.",
+    "stage": "economics",
+    "solutionType": "fc",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "flagship",
+    "buildWave": 2,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_CutoffGrade",
+      "docs": null
+    },
+    "featured": true,
+    "order": 34
+  },
+  {
+    "slug": "cuprice",
+    "name": "CuPrice Lab",
+    "oneliner": "Compute-then-explore app that fits and back-tests transparent copper-price models (ARIMA, ETS, VECM vs macro drivers, GARCH/Markov regimes).",
+    "stage": "economics",
+    "solutionType": "fc",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_CuPrice",
+      "docs": null
+    },
+    "featured": false,
+    "order": 35
+  },
+  {
+    "slug": "demandpulse",
+    "name": "DemandPulse",
+    "oneliner": "Transparent supply-demand balance and price-elasticity model combining historical refined-copper data with energy-transition demand scenarios.",
+    "stage": "economics",
+    "solutionType": "fc",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_DemandPulse",
+      "docs": null
+    },
+    "featured": false,
+    "order": 36
+  },
+  {
+    "slug": "raillp",
+    "name": "RailLP",
+    "oneliner": "Concentrate outbound-logistics optimizer: schedules rail-cycle and port-stockpile dispatch from mine to port as a time-expanded MILP, minimizing demurrage and idle wagon time under capacity windows.",
+    "stage": "logistics",
+    "solutionType": "opt",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_RailLP",
+      "docs": null
+    },
+    "featured": false,
+    "order": 37
+  }
+]
