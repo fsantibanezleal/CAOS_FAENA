@@ -622,7 +622,7 @@
     "stage": "asset-health",
     "solutionType": "cm",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
@@ -630,7 +630,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://rotorvitals.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_RotorVitals",
       "docs": null
     },
