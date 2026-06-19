@@ -1,19 +1,28 @@
 {
   "name": "caos-faena",
-  "version": "0.01.000",
+  "version": "0.02.000",
   "private": true,
   "type": "module",
   "description": "Faena — public mining-analytics hub: a launcher for a family of open mining web-apps.",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fasl-work/caos-app-shell": "^0.1.0",
+    "katex": "^0.16.11",
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.6.1",
-    "typescript": "^5.7.3"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
   }
 }
