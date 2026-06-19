@@ -74,7 +74,8 @@ export function Catalog() {
   const [statuses, setStatuses] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState('');
   const [view, setView] = useState<'chain' | 'matrix'>('chain');
-  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  // Lanes (value-chain categories) start COLLAPSED — the landing is a clean overview; expand on click.
+  const [collapsed, setCollapsed] = useState<Set<string>>(() => new Set(lanes().map((l) => l.stage.id)));
 
   const match = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -150,7 +151,7 @@ export function Catalog() {
             </>
           )}
           {laneList.map((l, i) => {
-            const open = !collapsed.has(l.stage.id);
+            const open = anyFilter || !collapsed.has(l.stage.id);
             return (
               <section className="lane" key={l.stage.id}>
                 <button className="lane-head" onClick={() => toggle(collapsed, l.stage.id, setCollapsed)} aria-expanded={open}>
