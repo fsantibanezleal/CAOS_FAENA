@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faena — Mining Analytics Hub</title>
+    <meta name="description" content="Open, free launcher for a family of mining-analytics web apps. Real datasets or validated synthetics, deep documentation. Part of fasl-work.com." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Pre-paint theme (same localStorage key as the shell). EN-default is handled by the shell.
+      (function () {
+        try {
+          var s = localStorage.getItem('caos.theme');
+          document.documentElement.dataset.theme = s
+            ? s
+            : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
