@@ -1,0 +1,76 @@
+/* Faena hub — catalog-specific styles, on top of @fasl-work/caos-app-shell/styles.css (shell tokens). */
+
+.hub-hero { padding: 1.5rem 0 1.25rem; border-bottom: 1px solid var(--color-border); margin-bottom: 1.25rem; }
+.hub-hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.2rem; letter-spacing: -0.02em; }
+.hub-tagline { font-size: 1.1rem; margin: 0 0 0.5rem; color: var(--color-fg); }
+.hub-stats { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--color-fg-subtle); margin-top: 0.8rem; }
+.hub-stats b { color: var(--color-fg); }
+
+/* toolbar: search + view toggle */
+.hub-toolbar { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.hub-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 9px; padding: 0 0.7rem; color: var(--color-fg-subtle); }
+.hub-search input { flex: 1; background: transparent; border: none; color: var(--color-fg); padding: 0.55rem 0; font-size: 0.95rem; outline: none; }
+.view-toggle { display: inline-flex; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
+.view-toggle button { background: var(--color-surface); border: none; color: var(--color-fg-subtle); padding: 0.45rem 0.9rem; font-size: 0.85rem; }
+.view-toggle button.on { background: var(--color-accent); color: var(--color-accent-fg); }
+
+/* filter chips */
+.hub-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.5rem; }
+.flabel { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-fg-faint); margin-left: 0.4rem; }
+.flabel:first-child { margin-left: 0; }
+.fchip { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-fg-subtle); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.82rem; }
+.fchip:hover { color: var(--color-fg); }
+.fchip .fdot { width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--color-fg-faint)); }
+.fchip .fic { display: inline-flex; }
+.fchip[aria-pressed="true"] { background: var(--c, var(--color-accent)); color: var(--color-accent-fg); border-color: transparent; }
+.fchip[aria-pressed="true"] .fdot { background: var(--color-accent-fg); }
+.fchip.st-live { --c: var(--color-good); }
+.fchip.st-building { --c: var(--color-warn); }
+.fchip.st-planned { --c: var(--color-fg-faint); }
+.fclear { background: none; border: none; color: var(--color-accent); font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.25rem; }
+
+.hub-section-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-fg-faint); margin: 0.5rem 0 0.8rem; }
+.tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 0.9rem; margin-bottom: 0.5rem; }
+
+/* lanes */
+.lane { border-top: 1px solid var(--color-border); }
+.lane-head { width: 100%; display: flex; align-items: center; gap: 0.6rem; background: none; border: none; padding: 0.85rem 0.2rem; text-align: left; color: var(--color-fg); }
+.lane-head h2 { font-size: 1.02rem; margin: 0; font-weight: 650; }
+.lane-num { font-variant-numeric: tabular-nums; color: var(--color-fg-faint); font-size: 0.85rem; width: 1.4em; text-align: right; }
+.lane-count { color: var(--color-fg-faint); font-size: 0.85rem; }
+.lane-chev { margin-left: auto; color: var(--color-fg-faint); transition: transform 0.15s; }
+.lane-chev.closed { transform: rotate(-90deg); }
+
+/* tile */
+.tile { position: relative; display: flex; flex-direction: column; gap: 0.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-left: 3px solid var(--c, var(--color-accent)); border-radius: 11px; padding: 0.85rem 0.9rem 0.75rem; box-shadow: var(--color-shadow); transition: transform 0.12s; }
+.tile:hover { transform: translateY(-2px); }
+.tile[data-status="planned"] { opacity: 0.6; border-style: dashed; }
+.tile-top { display: flex; align-items: center; gap: 0.5rem; }
+.tile-ic { display: inline-flex; flex: none; }
+.tile-name { font-weight: 660; font-size: 0.98rem; }
+.tile-dot { margin-left: auto; width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.tile-dot.live { background: var(--color-good); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-good) 22%, transparent); }
+.tile-dot.building { background: var(--color-warn); }
+.tile-dot.planned { background: var(--color-fg-faint); }
+.tile-one { font-size: 0.85rem; color: var(--color-fg-subtle); margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tile-meta { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; }
+.tile-meta .badge { font-size: 0.72rem; padding: 0.1rem 0.45rem; }
+.tile-meta .gdot { width: 8px; height: 8px; border-radius: 2px; }
+.tile-meta .gdot.GREEN { background: var(--color-good); }
+.tile-meta .gdot.YELLOW { background: var(--color-warn); }
+.tile-actions { display: flex; align-items: center; gap: 0.7rem; margin-top: 0.3rem; }
+.tile-open { padding: 0.35rem 0.9rem; font-size: 0.82rem; }
+.btn.tile-open[aria-disabled="true"] { background: var(--color-surface-2); color: var(--color-fg-faint); border-color: var(--color-border); cursor: default; }
+.tile-repo { font-size: 0.8rem; color: var(--color-fg-faint); }
+
+.hub-empty { padding: 3rem; text-align: center; color: var(--color-fg-faint); }
+
+/* matrix */
+.matrix-view .hint { color: var(--color-fg-subtle); font-size: 0.88rem; }
+.matrix-scroll { overflow-x: auto; }
+table.matrix { border-collapse: collapse; font-size: 0.84rem; width: 100%; margin-top: 0.6rem; }
+table.matrix th, table.matrix td { border: 1px solid var(--color-border); padding: 0.4rem 0.55rem; text-align: center; }
+table.matrix th.row-h { text-align: left; white-space: nowrap; color: var(--color-fg); font-weight: 600; }
+table.matrix td.has { font-weight: 700; cursor: pointer; }
+table.matrix td.has:hover { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+table.matrix td.zero { color: color-mix(in oklab, var(--color-fg-faint) 50%, transparent); }
