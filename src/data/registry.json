@@ -204,7 +204,7 @@
     "stage": "load-haul",
     "solutionType": "opt",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
@@ -212,7 +212,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://dispatchlab.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_DispatchLab",
       "docs": null
     },
@@ -556,7 +556,7 @@
     "stage": "tailings",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
@@ -564,7 +564,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://tailwatch.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_TailWatch",
       "docs": null
     },
