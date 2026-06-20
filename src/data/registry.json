@@ -336,7 +336,7 @@
     "stage": "crushing",
     "solutionType": "sim",
     "adr": "ADR-0054",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -344,7 +344,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://chancadem.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ChancaDEM",
       "docs": null
     },
