@@ -358,7 +358,7 @@
     "stage": "processing",
     "solutionType": "sim",
     "adr": "ADR-0054",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -366,7 +366,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://chargecascade.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ChargeCascade",
       "docs": null
     },
