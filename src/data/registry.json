@@ -28,7 +28,7 @@
     "stage": "exploration",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -36,7 +36,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://prospectmap.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ProspectMap",
       "docs": null
     },
