@@ -1,6 +1,6 @@
 {
   "name": "caos-faena",
-  "version": "0.02.001",
+  "version": "0.02.002",
   "private": true,
   "type": "module",
   "description": "Faena — public mining-analytics hub: a launcher for a family of open mining web-apps.",
