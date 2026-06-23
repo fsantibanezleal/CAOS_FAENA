@@ -358,7 +358,7 @@
     "stage": "processing",
     "solutionType": "sim",
     "adr": "ADR-0054",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
