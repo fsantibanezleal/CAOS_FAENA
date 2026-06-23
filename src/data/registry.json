@@ -834,5 +834,27 @@
     },
     "featured": false,
     "order": 37
+  },
+  {
+    "slug": "airgrid",
+    "name": "AirGrid",
+    "oneliner": "Ingest a real air-quality station network (SINCA MP10/MP2.5 + meteorology) -> estimate VIRTUAL stations off-grid by kriging/Land-Use-Regression -> Gaussian-plume source dispersion -> short-term PM10 forecast, with leave-one-station-out validation.",
+    "stage": "load-haul",
+    "solutionType": "geo",
+    "adr": "ADR-0054",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 7,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": "Real open data: SINCA (MMA Chile) station network MP10/MP2.5 + meteorology; licence/access to confirm in deep-research."
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_AirGrid",
+      "docs": null
+    },
+    "featured": false,
+    "order": 38
   }
 ]
