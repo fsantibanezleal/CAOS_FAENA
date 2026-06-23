@@ -6,7 +6,7 @@
     "stage": "exploration",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -28,7 +28,7 @@
     "stage": "exploration",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -72,7 +72,7 @@
     "stage": "mine-design",
     "solutionType": "viz",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -138,7 +138,7 @@
     "stage": "drill-blast",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -204,7 +204,7 @@
     "stage": "load-haul",
     "solutionType": "opt",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
@@ -336,7 +336,7 @@
     "stage": "crushing",
     "solutionType": "sim",
     "adr": "ADR-0054",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -556,7 +556,7 @@
     "stage": "tailings",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
@@ -754,7 +754,7 @@
     "stage": "economics",
     "solutionType": "fc",
     "adr": "ADR-0002",
-    "status": "live",
+    "status": "building",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
