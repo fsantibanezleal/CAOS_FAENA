@@ -754,7 +754,7 @@
     "stage": "economics",
     "solutionType": "fc",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -764,7 +764,7 @@
     "links": {
       "app": "https://cutoffgrade.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_CutoffGrade",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_CutoffGrade/tree/main/docs"
     },
     "featured": true,
     "order": 34
