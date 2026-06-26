@@ -11,7 +11,7 @@ const UI = {
       'Open, free, no login. Every tool is a real, documented suite — multiple methods over real datasets or validated synthetics, with a live interactive view. Not toy demos.',
     apps: 'apps', live: 'Live', building: 'Building', planned: 'Planned',
     search: 'Search apps…', solution: 'Solution', status: 'Status', clear: 'Clear',
-    chain: 'Value chain', matrix: 'Matrix', featured: 'Featured', open: 'Open', repo: 'repo',
+    chain: 'Value chain', matrix: 'Matrix', featured: 'Featured', open: 'Open', try: 'Try', repo: 'repo',
     matrixHint: 'Coverage map — rows are value-chain stages, columns are solution types. Click a cell to filter.',
     empty: 'No apps match your filters.', data: 'data',
   },
@@ -21,7 +21,7 @@ const UI = {
       'Abierto, gratis, sin login. Cada herramienta es una suite real y documentada — múltiples métodos sobre datasets reales o sintéticos validados, con una vista interactiva en vivo. No son demos de juguete.',
     apps: 'apps', live: 'En vivo', building: 'En desarrollo', planned: 'Planificada',
     search: 'Buscar apps…', solution: 'Solución', status: 'Estado', clear: 'Limpiar',
-    chain: 'Cadena de valor', matrix: 'Matriz', featured: 'Destacadas', open: 'Abrir', repo: 'repo',
+    chain: 'Cadena de valor', matrix: 'Matriz', featured: 'Destacadas', open: 'Abrir', try: 'Probar', repo: 'repo',
     matrixHint: 'Mapa de cobertura — filas: etapas de la cadena de valor, columnas: tipos de solución. Clic en una celda para filtrar.',
     empty: 'Ninguna app coincide con los filtros.', data: 'datos',
   },
@@ -41,6 +41,9 @@ function Tile({ app, lang }: { app: AppT; lang: Lang }) {
   const facet = facetById[app.solutionType];
   const color = facet?.color ?? 'var(--color-accent)';
   const isLive = app.status === 'live' && app.links.app;
+  // A building app that is already DEPLOYED (has a live app URL) is still openable so you can navigate from the hub
+  // and try it; only 'planned' (no deployed URL) stays disabled. The status dot keeps the live/building distinction.
+  const canOpen = !!app.links.app && app.status !== 'planned';
   return (
     <article className="tile" data-status={app.status} style={{ '--c': color } as CSSProperties}>
       <div className="tile-top">
@@ -54,10 +57,10 @@ function Tile({ app, lang }: { app: AppT; lang: Lang }) {
         {app.adr && <span className="badge mono">{app.adr.replace('ADR-00', 'ADR-')}</span>}
       </div>
       <div className="tile-actions">
-        {isLive ? (
-          <a className="btn primary tile-open" href={app.links.app!}>{t.open}</a>
+        {canOpen ? (
+          <a className="btn primary tile-open" href={app.links.app!}>{isLive ? t.open : t.try}</a>
         ) : (
-          <span className="btn tile-open" aria-disabled="true">{app.status === 'building' ? t.building : t.planned}</span>
+          <span className="btn tile-open" aria-disabled="true">{t.planned}</span>
         )}
         {app.status !== 'planned' && app.links.repo && (
           <a className="tile-repo" href={app.links.repo} target="_blank" rel="noreferrer noopener">{t.repo} ↗</a>
