@@ -5,7 +5,7 @@ dist/
 # deps
 node_modules/
 
-# env & secrets (NEVER commit; secrets live only in _CAOS_MANAGE/credentials/)
+# env & secrets (NEVER commit; keep secrets out of the repo)
 .env
 .env.*
 !.env.example
