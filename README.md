@@ -1,5 +1,8 @@
 # Faena — Mining Analytics Hub
 
+[![License](https://img.shields.io/github/license/fsantibanezleal/CAOS_FAENA)](LICENSE)
+[![Live demo](https://img.shields.io/badge/demo-live-2ea44f)](https://faena.fasl-work.com)
+
 **Faena** is a public, open showcase of mining-analytics capability: a single launcher for a growing
 family of independent mining web-apps. Nothing here is proprietary. Each app is a self-contained,
 documented product — theory, method, experiments, and a live interactive demo — and every app stands
