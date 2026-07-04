@@ -32,8 +32,8 @@
   {
     "id": "processing",
     "order": 5,
-    "labelEN": "Processing — Flotation / Leaching",
-    "labelES": "Procesamiento — Flotación / Lixiviación"
+    "labelEN": "Processing, Flotation / Leaching",
+    "labelES": "Procesamiento, Flotación / Lixiviación"
   },
   {
     "id": "stockpiling",

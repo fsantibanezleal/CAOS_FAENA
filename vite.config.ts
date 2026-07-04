@@ -21,14 +21,14 @@ const HUB_DESC =
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// live first, then building, then planned — the crawlable list leads with what actually ships.
+// live first, then building, then planned, the crawlable list leads with what actually ships.
 const rank = (s: CatalogApp['status']) => (s === 'live' ? 0 : s === 'building' ? 1 : 2);
 
 // Read the catalog at build time and ship the hub as a crawlable, no-JS evidence surface:
 //   1. a <noscript> catalog with real <a> links, so search crawlers and JS-disabled clients still
 //      see every app (the React SPA renders into an empty #root, invisible to a no-JS fetch);
 //   2. a JSON-LD ItemList of the shipped apps as SoftwareApplication nodes (structured data).
-// Both are inert when JS runs — the SPA hydrates #root as before. This makes the hub findable
+// Both are inert when JS runs, the SPA hydrates #root as before. This makes the hub findable
 // without migrating the framework (issue #41: "the hub becomes the crawlable evidence surface").
 function crawlableCatalog(): Plugin {
   return {
@@ -58,7 +58,7 @@ function crawlableCatalog(): Plugin {
       const ld = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Faena — Mining Analytics Hub',
+        name: 'Faena, Mining Analytics Hub',
         description: HUB_DESC,
         url: HUB_URL,
         mainEntity: {
@@ -94,7 +94,7 @@ function crawlableCatalog(): Plugin {
   };
 }
 
-// Faena hub — static SPA on GitHub Pages at faena.fasl-work.com (custom domain → base '/').
+// Faena hub, static SPA on GitHub Pages at faena.fasl-work.com (custom domain → base '/').
 export default defineConfig({
   base: '/',
   plugins: [react(), crawlableCatalog()],
