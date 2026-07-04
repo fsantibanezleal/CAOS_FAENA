@@ -16,7 +16,7 @@
     "links": {
       "app": "https://corelog.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_CoreLog",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_CoreLog/tree/main/docs"
     },
     "featured": true,
     "order": 0
@@ -38,7 +38,7 @@
     "links": {
       "app": "https://prospectmap.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ProspectMap",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_ProspectMap/tree/main/docs"
     },
     "featured": true,
     "order": 1
@@ -82,7 +82,7 @@
     "links": {
       "app": "https://pitforge.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_PitForge",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_PitForge/tree/main/docs"
     },
     "featured": true,
     "order": 3
@@ -143,12 +143,12 @@
     "buildWave": 2,
     "dataVerdict": {
       "grade": "YELLOW",
-      "note": ""
+      "note": "No public sieve-paired muckpile dataset exists: absolute accuracy is anchored on synthetics with known PSD plus a sieve-paired aggregate set; results on real muckpile photos are relative agreement, not ground truth."
     },
     "links": {
       "app": "https://fragmentiq.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_FragmentIQ",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_FragmentIQ/tree/main/docs"
     },
     "featured": true,
     "order": 6
@@ -214,7 +214,7 @@
     "links": {
       "app": "https://dispatchlab.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_DispatchLab",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_DispatchLab/tree/main/docs"
     },
     "featured": true,
     "order": 9
@@ -346,7 +346,7 @@
     "links": {
       "app": "https://chancadem.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ChancaDEM",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_ChancaDEM/tree/main/docs"
     },
     "featured": true,
     "order": 15
@@ -368,7 +368,7 @@
     "links": {
       "app": "https://chargecascade.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_ChargeCascade",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_ChargeCascade/tree/main/docs"
     },
     "featured": true,
     "order": 16
@@ -566,7 +566,7 @@
     "links": {
       "app": "https://tailwatch.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_TailWatch",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_TailWatch/tree/main/docs"
     },
     "featured": true,
     "order": 25
@@ -846,7 +846,7 @@
     "tier": "core",
     "buildWave": 7,
     "dataVerdict": {
-      "grade": "GREEN",
+      "grade": "YELLOW",
       "note": "Real open data: SINCA (MMA Chile) station network MP10/MP2.5 + meteorology; licence/access to confirm in deep-research."
     },
     "links": {

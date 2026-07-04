@@ -8,7 +8,7 @@ const UI = {
   en: {
     tagline: 'The mining-analytics works — one yard, many tools.',
     intro:
-      'Open, free, no login. Every tool is a real, documented suite — multiple methods over real datasets or validated synthetics, with a live interactive view. Not toy demos.',
+      'Open, free, no login. Every shipped tool is a real, documented suite — multiple methods over real datasets or validated synthetics, with a live interactive view. Not toy demos. Planned tiles are the visible roadmap.',
     apps: 'apps', live: 'Live', building: 'Building', planned: 'Planned',
     search: 'Search apps…', solution: 'Solution', status: 'Status', clear: 'Clear',
     chain: 'Value chain', matrix: 'Matrix', featured: 'Featured', open: 'Open', try: 'Try', repo: 'repo',
@@ -18,7 +18,7 @@ const UI = {
   es: {
     tagline: 'La faena de la analítica minera — un patio, muchas herramientas.',
     intro:
-      'Abierto, gratis, sin login. Cada herramienta es una suite real y documentada — múltiples métodos sobre datasets reales o sintéticos validados, con una vista interactiva en vivo. No son demos de juguete.',
+      'Abierto, gratis, sin login. Cada herramienta publicada es una suite real y documentada — múltiples métodos sobre datasets reales o sintéticos validados, con una vista interactiva en vivo. No son demos de juguete. Las fichas planificadas son la hoja de ruta visible.',
     apps: 'apps', live: 'En vivo', building: 'En desarrollo', planned: 'Planificada',
     search: 'Buscar apps…', solution: 'Solución', status: 'Estado', clear: 'Limpiar',
     chain: 'Cadena de valor', matrix: 'Matriz', featured: 'Destacadas', open: 'Abrir', try: 'Probar', repo: 'repo',
