@@ -4,13 +4,14 @@
 [![Live demo](https://img.shields.io/badge/demo-live-2ea44f)](https://faena.fasl-work.com)
 
 **Faena** is a public, open showcase of mining-analytics capability: a single launcher for a growing
-family of independent mining web-apps. Nothing here is proprietary. Each app is a self-contained,
-documented product — theory, method, experiments, and a live interactive demo — and every app stands
-on a **named real dataset or a validated synthetic**, never on data we do not have.
+family of independent mining web-apps. Nothing here is proprietary. Each shipped app is a
+self-contained, documented product — theory, method, experiments, and a live interactive demo — and
+stands on a **named real dataset or a validated synthetic**, never on data we do not have. The rest
+of the catalog is the visible roadmap (`building` / `planned` tiles).
 
 > *The mining-analytics works — one yard, many tools.* · **faena.fasl-work.com**
 
-This repository is the **hub** itself: a fast, static launcher that indexes every app. The apps live
+This repository is the **hub** itself: a lightweight single-page launcher that indexes every app. The apps live
 in their own repositories and run at their own subdomains; the hub never bundles or proxies them — it
 only lists them and links out.
 
@@ -30,9 +31,11 @@ and each app becomes reachable the moment it ships.
 
 ## Stack
 
-- **Astro** (static output) — the hub is a launcher, not an app, so it ships almost no JS and is fully
-  crawlable. Deployed to **GitHub Pages** at `faena.fasl-work.com`.
-- **i18n** English-first, Spanish second (`/` and `/es/`). **Light/dark** theme (system default + toggle).
+- **React 19 + Vite** single-page app on the shared **`@fasl-work/caos-app-shell`** (header, footer,
+  i18n, and theming come from the shell). The catalog is rendered client-side, so JS is required to
+  view it. Built to static files and deployed to **GitHub Pages** at `faena.fasl-work.com`.
+- **i18n** English-first, Spanish via the shell's language toggle. **Light/dark** theme (system
+  default + toggle).
 - Fully **data-driven** from `src/data/registry.json` + `stages.json` + `solutionTypes.json`. Adding an
   app, a stage, or a solution-type is a data edit — no layout code changes.
 
@@ -40,16 +43,16 @@ and each app becomes reachable the moment it ships.
 
 ```bash
 npm install
-npm run dev        # http://localhost:4321
-npm run build      # static output → dist/
+npm run dev        # http://localhost:5173 (Vite default)
+npm run build      # type-check + production build → dist/
 npm run preview
 ```
 
 ## Add or update an app
 
 Edit `src/data/registry.json` (one record per app: slug, name, oneliner, stage, solutionType, status,
-data verdict, links). Flip `status` to `live` and fill `links.app` when an app ships — the tile
-activates automatically.
+data verdict, links). Fill `links.app` when an app deploys — the tile becomes openable while still
+`building`. Flip `status` to `live` only when the app passes its at-bar review.
 
 ## License & data policy
 
