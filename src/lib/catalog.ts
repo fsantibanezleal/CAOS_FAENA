@@ -52,7 +52,7 @@ export function lanes(): { stage: Stage; apps: App[] }[] {
   })).filter((l) => l.apps.length > 0);
 }
 
-/** Featured apps (the ★ row) — flagship tier, by build wave then name. */
+/** Featured apps (the ★ row), flagship tier, by build wave then name. */
 export function featured(): App[] {
   return APPS.filter((a) => a.featured).sort(
     (a, b) => (a.buildWave ?? 99) - (b.buildWave ?? 99) || a.name.localeCompare(b.name),
