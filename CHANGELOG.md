@@ -2,6 +2,20 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.03.000] · 2026-07-04
+
+### Fixed
+- Tile label now echoes the real status when a tile can't be opened: a `building` app without a deployed
+  URL yet reads **Building** (matching its status dot), not **Planned**. Previously the disabled action
+  button was hard-coded to `Planned`, which would misreport any scaffolded-but-undeployed app (issue #41).
+
+### Added
+- Crawlable, no-JS evidence surface: a build-time Vite plugin injects a `<noscript>` catalog (real `<a>`
+  links to every app, so search crawlers and JS-disabled clients see the full list) and a JSON-LD
+  `CollectionPage` / `ItemList` of the shipped apps as `SoftwareApplication` nodes. The React SPA still
+  hydrates `#root`; both artifacts are inert when JS runs. Makes the hub findable without an Astro
+  migration (issue #41).
+
 ## [0.02.004] · 2026-07-03
 
 ### Added
