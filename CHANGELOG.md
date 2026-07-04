@@ -2,6 +2,13 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.03.001] · 2026-07-04
+
+### Changed
+- Content standards (ADR-0067): removed every em-dash from tracked content (replaced with commas). No
+  behaviour change. Added `scripts/check_content_standards.py` + a CI `guards` job so the hub cannot
+  regress on em-dashes or emojis.
+
 ## [0.03.000] · 2026-07-04
 
 ### Fixed

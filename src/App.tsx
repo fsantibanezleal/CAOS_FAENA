@@ -6,23 +6,23 @@ import { facetIcons } from './lib/icons';
 
 const UI = {
   en: {
-    tagline: 'The mining-analytics works — one yard, many tools.',
+    tagline: 'The mining-analytics works, one yard, many tools.',
     intro:
-      'Open, free, no login. Every shipped tool is a real, documented suite — multiple methods over real datasets or validated synthetics, with a live interactive view. Not toy demos. Planned tiles are the visible roadmap.',
+      'Open, free, no login. Every shipped tool is a real, documented suite, multiple methods over real datasets or validated synthetics, with a live interactive view. Not toy demos. Planned tiles are the visible roadmap.',
     apps: 'apps', live: 'Live', building: 'Building', planned: 'Planned',
     search: 'Search apps…', solution: 'Solution', status: 'Status', clear: 'Clear',
     chain: 'Value chain', matrix: 'Matrix', featured: 'Featured', open: 'Open', try: 'Try', repo: 'repo',
-    matrixHint: 'Coverage map — rows are value-chain stages, columns are solution types. Click a cell to filter.',
+    matrixHint: 'Coverage map, rows are value-chain stages, columns are solution types. Click a cell to filter.',
     empty: 'No apps match your filters.', data: 'data',
   },
   es: {
-    tagline: 'La faena de la analítica minera — un patio, muchas herramientas.',
+    tagline: 'La faena de la analítica minera, un patio, muchas herramientas.',
     intro:
-      'Abierto, gratis, sin login. Cada herramienta publicada es una suite real y documentada — múltiples métodos sobre datasets reales o sintéticos validados, con una vista interactiva en vivo. No son demos de juguete. Las fichas planificadas son la hoja de ruta visible.',
+      'Abierto, gratis, sin login. Cada herramienta publicada es una suite real y documentada, múltiples métodos sobre datasets reales o sintéticos validados, con una vista interactiva en vivo. No son demos de juguete. Las fichas planificadas son la hoja de ruta visible.',
     apps: 'apps', live: 'En vivo', building: 'En desarrollo', planned: 'Planificada',
     search: 'Buscar apps…', solution: 'Solución', status: 'Estado', clear: 'Limpiar',
     chain: 'Cadena de valor', matrix: 'Matriz', featured: 'Destacadas', open: 'Abrir', try: 'Probar', repo: 'repo',
-    matrixHint: 'Mapa de cobertura — filas: etapas de la cadena de valor, columnas: tipos de solución. Clic en una celda para filtrar.',
+    matrixHint: 'Mapa de cobertura, filas: etapas de la cadena de valor, columnas: tipos de solución. Clic en una celda para filtrar.',
     empty: 'Ninguna app coincide con los filtros.', data: 'datos',
   },
 } as const;
@@ -80,7 +80,7 @@ export function Catalog() {
   const [statuses, setStatuses] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState('');
   const [view, setView] = useState<'chain' | 'matrix'>('chain');
-  // Lanes (value-chain categories) start COLLAPSED — the landing is a clean overview; expand on click.
+  // Lanes (value-chain categories) start COLLAPSED, the landing is a clean overview; expand on click.
   const [collapsed, setCollapsed] = useState<Set<string>>(() => new Set(lanes().map((l) => l.stage.id)));
 
   const match = useMemo(() => {

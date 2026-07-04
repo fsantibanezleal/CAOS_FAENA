@@ -1,4 +1,4 @@
-/* Faena hub — catalog-specific styles, on top of @fasl-work/caos-app-shell/styles.css (shell tokens). */
+/* Faena hub, catalog-specific styles, on top of @fasl-work/caos-app-shell/styles.css (shell tokens). */
 
 .hub-hero { padding: 1.5rem 0 1.25rem; border-bottom: 1px solid var(--color-border); margin-bottom: 1.25rem; }
 .hub-hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.2rem; letter-spacing: -0.02em; }

@@ -3,7 +3,7 @@
   "version": "0.2.4",
   "private": true,
   "type": "module",
-  "description": "Faena — public mining-analytics hub: a launcher for a family of open mining web-apps.",
+  "description": "Faena, public mining-analytics hub: a launcher for a family of open mining web-apps.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
