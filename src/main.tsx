@@ -14,7 +14,7 @@ const config: ShellConfig = {
   product: { name: 'Faena', mark: <Mountain size={18} aria-hidden="true" /> },
   routes: [],
   links: { github: 'https://github.com/fsantibanezleal/CAOS_FAENA' },
-  version: '0.02.004',
+  version: '0.03.000',
 };
 
 createRoot(document.getElementById('root')!).render(
