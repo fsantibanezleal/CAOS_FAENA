@@ -44,6 +44,9 @@ function Tile({ app, lang }: { app: AppT; lang: Lang }) {
   // A building app that is already DEPLOYED (has a live app URL) is still openable so you can navigate from the hub
   // and try it; only 'planned' (no deployed URL) stays disabled. The status dot keeps the live/building distinction.
   const canOpen = !!app.links.app && app.status !== 'planned';
+  // When it can't be opened, the disabled button must echo the ACTUAL status, not always "Planned":
+  // a scaffolded 'building' app with no deployed URL yet (e.g. FrothSeg) reads "Building", matching its dot.
+  const disabledLabel = app.status === 'planned' ? t.planned : t.building;
   return (
     <article className="tile" data-status={app.status} style={{ '--c': color } as CSSProperties}>
       <div className="tile-top">
@@ -60,7 +63,7 @@ function Tile({ app, lang }: { app: AppT; lang: Lang }) {
         {canOpen ? (
           <a className="btn primary tile-open" href={app.links.app!}>{isLive ? t.open : t.try}</a>
         ) : (
-          <span className="btn tile-open" aria-disabled="true">{t.planned}</span>
+          <span className="btn tile-open" aria-disabled="true">{disabledLabel}</span>
         )}
         {app.status !== 'planned' && app.links.repo && (
           <a className="tile-repo" href={app.links.repo} target="_blank" rel="noreferrer noopener">{t.repo} ↗</a>

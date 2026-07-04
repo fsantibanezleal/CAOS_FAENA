@@ -32,8 +32,11 @@ and each app becomes reachable the moment it ships.
 ## Stack
 
 - **React 19 + Vite** single-page app on the shared **`@fasl-work/caos-app-shell`** (header, footer,
-  i18n, and theming come from the shell). The catalog is rendered client-side, so JS is required to
-  view it. Built to static files and deployed to **GitHub Pages** at `faena.fasl-work.com`.
+  i18n, and theming come from the shell). The interactive catalog is rendered client-side into `#root`.
+  Built to static files and deployed to **GitHub Pages** at `faena.fasl-work.com`.
+- **Crawlable without JS.** A build-time Vite plugin (`vite.config.ts`) reads the registry and injects
+  a `<noscript>` catalog with real links plus a JSON-LD `CollectionPage` / `ItemList`, so search
+  crawlers and JS-disabled clients still see every app. Both artifacts are inert once the SPA hydrates.
 - **i18n** English-first, Spanish via the shell's language toggle. **Light/dark** theme (system
   default + toggle).
 - Fully **data-driven** from `src/data/registry.json` + `stages.json` + `solutionTypes.json`. Adding an
