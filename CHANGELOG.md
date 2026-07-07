@@ -2,6 +2,13 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.04.001] · 2026-07-07
+
+### Changed
+- Registry: PitForge (v0.08.002) and DispatchLab (v0.13.002) flipped `building -> live` after passing
+  their at-bar close-out and review. Live members now: RotorVitals, ChargeCascade, CutoffGrade,
+  PitForge, DispatchLab (5 live, 5 building, 29 planned).
+
 ## [0.04.000] · 2026-07-07
 
 ### Added
