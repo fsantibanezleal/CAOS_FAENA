@@ -2,6 +2,15 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.04.002] · 2026-07-07
+
+### Changed
+- Registry: ChancaDEM (v0.05.000), ProspectMap (v0.07.000), FragmentIQ (v0.08.000) and CoreLog
+  (v0.08.000) flipped `building -> live` after each shipped its real-data Source lane and passed
+  at-bar review. Live members now: 9 (RotorVitals, ChargeCascade, CutoffGrade, PitForge, DispatchLab,
+  ChancaDEM, ProspectMap, FragmentIQ, CoreLog). TailWatch stays `building` pending a real
+  mine/tailings AOI (its current real sample is a volcanic caldera). Counts: 9 live, 1 building, 29 planned.
+
 ## [0.04.001] · 2026-07-07
 
 ### Changed

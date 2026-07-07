@@ -15,7 +15,7 @@ const config: ShellConfig = {
   product: { name: 'Faena', mark: <Mountain size={18} aria-hidden="true" /> },
   routes: [],
   links: { github: 'https://github.com/fsantibanezleal/CAOS_FAENA' },
-  version: '0.04.001',
+  version: '0.04.002',
   // ADR-0058: the ⓘ header button opens the "how the hub works" modal (data-driven / hub-satellites / live-gate).
   architecture,
   // ADR-0016 §2: honest footer provenance + disclaimer. The hub hosts no data or models of its own.
