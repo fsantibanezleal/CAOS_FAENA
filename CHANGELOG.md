@@ -2,6 +2,15 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.04.000] · 2026-07-07
+
+### Added
+- In-app Architecture / "How the hub works" modal (ADR-0058): an ⓘ header button opens a 3-tab modal
+  (Data-driven, Hub and satellites, Curated vs derived + the "live" gate), each pairing a hand-authored
+  theme-aware SVG (`public/svg/01-03`) with a bilingual EN/ES body. Screenshot-verified light + dark.
+- Footer provenance + disclaimer (ADR-0016 §2): the hub is a static launcher with no backend or data of
+  its own; tile states are curated and "live" is granted only after an app passes its at-bar review.
+
 ## [0.03.001] · 2026-07-04
 
 ### Changed
