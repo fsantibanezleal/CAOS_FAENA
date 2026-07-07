@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" class="arch-svg" role="img" aria-label="How three JSON files drive the whole catalog: registry, stages and solutionTypes are composed into the value-chain lanes and the coverage matrix">
+  <!-- Hand-authored. Every colour is a shell CSS variable, so the diagram repaints
+       with the active light/dark theme when inlined into the SPA (ADR-0058). -->
+  <style>
+    .arch-svg text { font-family: var(--font-sans, Inter, "Segoe UI", system-ui, sans-serif); }
+    .arch-svg .mono { font-family: var(--font-mono, ui-monospace, Consolas, monospace); }
+    .arch-svg .bx { fill: var(--color-surface-2); stroke: var(--color-border); stroke-width: 1.2; }
+    .arch-svg .bx-acc { fill: var(--color-surface-2); stroke: var(--color-accent); stroke-width: 1.4; }
+    .arch-svg .ttl { fill: var(--color-fg); font-size: 13px; font-weight: 700; }
+    .arch-svg .sub { fill: var(--color-fg-subtle); font-size: 10px; }
+    .arch-svg .it  { fill: var(--color-fg); font-size: 10.5px; }
+    .arch-svg .cd  { fill: var(--color-accent); font-size: 9.5px; }
+    .arch-svg .mu  { fill: var(--color-fg-subtle); font-size: 10px; }
+    .arch-svg .flow { fill: none; stroke: var(--color-fg-faint); stroke-width: 1.4; }
+    .arch-svg .lbl { fill: var(--color-fg-subtle); font-size: 9px; }
+  </style>
+  <defs>
+    <marker id="dd-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="var(--color-fg-faint)"/>
+    </marker>
+  </defs>
+
+  <text class="ttl" x="24" y="30">Three JSON files drive everything you see</text>
+  <text class="sub" x="24" y="47">the hub renders nothing hard-coded: the catalog is a pure function of the data files, composed at load</text>
+
+  <!-- ===== Sources ===== -->
+  <text class="sub" x="30" y="82" style="font-weight:700">SOURCE OF TRUTH</text>
+  <rect class="bx-acc" x="24" y="92" width="196" height="60" rx="9"/>
+  <text class="mono cd" x="38" y="114">registry.json</text>
+  <text class="it" x="38" y="132">39 apps: name, oneliner,</text>
+  <text class="it" x="38" y="146">status, stage, solutionType, links</text>
+
+  <rect class="bx" x="24" y="164" width="196" height="52" rx="9"/>
+  <text class="mono cd" x="38" y="186">stages.json</text>
+  <text class="it" x="38" y="204">13 value-chain stages (order)</text>
+
+  <rect class="bx" x="24" y="228" width="196" height="52" rx="9"/>
+  <text class="mono cd" x="38" y="250">solutionTypes.json</text>
+  <text class="it" x="38" y="268">8 facets: colour + icon</text>
+
+  <!-- ===== Compose ===== -->
+  <path class="flow" d="M220 122 H300" marker-end="url(#dd-arrow)"/>
+  <path class="flow" d="M220 190 H300" marker-end="url(#dd-arrow)"/>
+  <path class="flow" d="M220 254 H280 V190 H300" marker-end="url(#dd-arrow)"/>
+  <rect class="bx-acc" x="300" y="150" width="180" height="82" rx="10"/>
+  <text class="mono cd" x="316" y="176">lib/catalog.ts</text>
+  <text class="it" x="316" y="196">join + group + count</text>
+  <text class="mu" x="316" y="214">lanes() · matrixCounts()</text>
+  <text class="mu" x="316" y="228">featured() · stats</text>
+
+  <!-- ===== Renders ===== -->
+  <text class="sub" x="560" y="82" style="font-weight:700">RENDERED VIEWS</text>
+  <path class="flow" d="M480 176 H540 V116 H560" marker-end="url(#dd-arrow)"/>
+  <path class="flow" d="M480 196 H560" marker-end="url(#dd-arrow)"/>
+  <path class="flow" d="M480 214 H540 V300 H560" marker-end="url(#dd-arrow)"/>
+
+  <rect class="bx" x="560" y="92" width="316" height="48" rx="9"/>
+  <text class="it" x="576" y="112" style="font-weight:700">Hero counts</text>
+  <text class="mu" x="576" y="130">39 apps · 3 live · 7 building · 29 planned (derived live)</text>
+
+  <rect class="bx" x="560" y="152" width="316" height="80" rx="9"/>
+  <text class="it" x="576" y="172" style="font-weight:700">Value-chain lanes (default)</text>
+  <text class="mu" x="576" y="190">one swimlane per stage, in process order;</text>
+  <text class="mu" x="576" y="206">collapsed by default, tiles coloured by facet;</text>
+  <text class="mu" x="576" y="222">search + facet/status chips filter in place</text>
+
+  <rect class="bx" x="560" y="244" width="316" height="72" rx="9"/>
+  <text class="it" x="576" y="264" style="font-weight:700">Coverage matrix</text>
+  <text class="mu" x="576" y="282">stage x facet counts; a cell narrows the catalog</text>
+  <text class="mu" x="576" y="298">to that stage + facet. Zero cells stay muted.</text>
+
+  <!-- ===== Build-time crawl surface ===== -->
+  <rect class="bx" x="24" y="360" width="852" height="86" rx="10"/>
+  <text class="it" x="40" y="384" style="font-weight:700">Build time reuses the SAME registry.json</text>
+  <text class="mu" x="40" y="404">A Vite plugin reads registry.json and injects a no-JS &lt;noscript&gt; catalog (real &lt;a&gt; links) plus a JSON-LD</text>
+  <text class="mu" x="40" y="420">ItemList of the shipped apps, so crawlers and JS-disabled clients still see every app. The SPA hydrates</text>
+  <text class="mu" x="40" y="436">the same data into an empty #root when JavaScript runs. One source of truth, three consumers.</text>
+</svg>

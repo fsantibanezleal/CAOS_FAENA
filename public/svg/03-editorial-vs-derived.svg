@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" class="arch-svg" role="img" aria-label="What is hand-curated versus computed: editorial fields versus derived views, and the at-bar gate that a tile must pass before it may say live">
+  <style>
+    .arch-svg text { font-family: var(--font-sans, Inter, "Segoe UI", system-ui, sans-serif); }
+    .arch-svg .mono { font-family: var(--font-mono, ui-monospace, Consolas, monospace); }
+    .arch-svg .bx { fill: var(--color-surface-2); stroke: var(--color-border); stroke-width: 1.2; }
+    .arch-svg .bx-ed { fill: var(--color-surface-2); stroke: var(--color-accent); stroke-width: 1.4; }
+    .arch-svg .bx-dv { fill: var(--color-surface-2); stroke: var(--color-good); stroke-width: 1.4; }
+    .arch-svg .ttl { fill: var(--color-fg); font-size: 13px; font-weight: 700; }
+    .arch-svg .sub { fill: var(--color-fg-subtle); font-size: 10px; }
+    .arch-svg .hd-ed { fill: var(--color-accent); font-size: 11px; font-weight: 700; }
+    .arch-svg .hd-dv { fill: var(--color-good); font-size: 11px; font-weight: 700; }
+    .arch-svg .it  { fill: var(--color-fg); font-size: 10px; }
+    .arch-svg .mu  { fill: var(--color-fg-subtle); font-size: 9px; }
+    .arch-svg .gate { fill: var(--color-fg); font-size: 10.5px; font-weight: 700; }
+    .arch-svg .flow { fill: none; stroke: var(--color-fg-faint); stroke-width: 1.4; }
+  </style>
+  <defs>
+    <marker id="ev-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="var(--color-fg-faint)"/>
+    </marker>
+  </defs>
+
+  <text class="ttl" x="24" y="30">What is curated, what is computed, and the gate for "live"</text>
+  <text class="sub" x="24" y="47">the tile you click carries two kinds of fields; only the editorial ones are typed by hand, and the status field is governed.</text>
+
+  <!-- Editorial -->
+  <rect class="bx-ed" x="24" y="70" width="400" height="176" rx="11"/>
+  <text class="hd-ed" x="44" y="96">EDITORIAL · hand-curated in registry.json</text>
+  <text class="it" x="44" y="120">· name, oneliner, stage, solutionType</text>
+  <text class="it" x="44" y="140">· status (planned / building / live), governed, see below</text>
+  <text class="it" x="44" y="160">· featured flag, catalog order</text>
+  <text class="it" x="44" y="180">· links.app / links.repo / links.docs</text>
+  <text class="it" x="44" y="200">· dataVerdict grade (GREEN / YELLOW / RED) + note</text>
+  <text class="mu" x="44" y="224">a human writes these; they are claims the author stands behind</text>
+  <text class="mu" x="44" y="238">and are reviewed, never machine-invented.</text>
+
+  <!-- Derived -->
+  <rect class="bx-dv" x="24" y="258" width="400" height="164" rx="11"/>
+  <text class="hd-dv" x="44" y="284">DERIVED · computed at load by catalog.ts</text>
+  <text class="it" x="44" y="308">· hero counts (total / live / building / planned)</text>
+  <text class="it" x="44" y="328">· the value-chain lanes (group by stage, in order)</text>
+  <text class="it" x="44" y="348">· the coverage matrix (stage x facet counts)</text>
+  <text class="it" x="44" y="368">· the featured row, the facet + status filters</text>
+  <text class="mu" x="44" y="392">no hand-kept totals: every number recomputes from the rows,</text>
+  <text class="mu" x="44" y="406">so the counts can never drift from the catalog.</text>
+
+  <!-- Gate -->
+  <rect class="bx" x="470" y="96" width="406" height="300" rx="12"/>
+  <text class="gate" x="490" y="124">The at-bar gate on status: live</text>
+  <text class="mu" x="490" y="144">deploying an app is NOT enough to call it live.</text>
+
+  <rect class="bx-ed" x="500" y="164" width="346" height="40" rx="8"/>
+  <text class="it" x="518" y="188">planned: no repo/URL yet; a roadmap tile</text>
+
+  <path class="flow" d="M673 204 V222" marker-end="url(#ev-arrow)"/>
+  <rect class="bx-ed" x="500" y="224" width="346" height="52" rx="8"/>
+  <text class="it" x="518" y="246">building: deployed and openable ("Try"),</text>
+  <text class="it" x="518" y="264">but NOT yet through its at-bar review</text>
+
+  <path class="flow" d="M673 276 V294" marker-end="url(#ev-arrow)"/>
+  <rect class="bx-dv" x="500" y="296" width="346" height="52" rx="8"/>
+  <text class="it" x="518" y="318" style="font-weight:700">live: passed the RotorVitals quality bar,</text>
+  <text class="mu" x="518" y="336">real data lane · full method ladder · deep docs · honest claims</text>
+
+  <text class="mu" x="490" y="372">so a "live" dot is a promise the app was audited, not merely that</text>
+  <text class="mu" x="490" y="386">it responds to a URL. This is the hub's one editorial guarantee.</text>
+</svg>
