@@ -72,7 +72,7 @@
     "stage": "mine-design",
     "solutionType": "viz",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -204,7 +204,7 @@
     "stage": "load-haul",
     "solutionType": "opt",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
