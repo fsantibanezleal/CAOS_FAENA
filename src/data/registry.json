@@ -6,7 +6,7 @@
     "stage": "exploration",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -28,7 +28,7 @@
     "stage": "exploration",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -138,7 +138,7 @@
     "stage": "drill-blast",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
@@ -336,7 +336,7 @@
     "stage": "crushing",
     "solutionType": "sim",
     "adr": "ADR-0054",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 2,
     "dataVerdict": {
