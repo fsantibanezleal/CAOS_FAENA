@@ -556,7 +556,7 @@
     "stage": "tailings",
     "solutionType": "geo",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 1,
     "dataVerdict": {
