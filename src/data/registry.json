@@ -376,11 +376,11 @@
   {
     "slug": "frothseg",
     "name": "FrothSeg",
-    "oneliner": "In-browser bubble segmentation of flotation froth images (watershed baseline + distilled SAM2/Mask-R-CNN mask head) producing the bubble-size-distribution, with a built-in synthetic-froth benchmark mode for mask validation.",
+    "oneliner": "In-browser flotation-froth bubble segmentation with a zero-shot SAM-class foundation model (SlimSAM via onnxruntime-web + WebGPU, WASM fallback), producing the bubble-size distribution and froth state, with a cited scikit-image watershed floor and a synthetic-froth benchmark (mean SAM AP 0.365 vs floor 0.262, wins 10/13).",
     "stage": "processing",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -388,9 +388,9 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://frothseg.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_FrothSeg",
-      "docs": null
+      "docs": "https://github.com/fsantibanezleal/CAOS_FrothSeg/tree/main/docs"
     },
     "featured": true,
     "order": 17
