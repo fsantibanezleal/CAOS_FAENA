@@ -856,5 +856,49 @@
     },
     "featured": false,
     "order": 38
+  },
+  {
+    "slug": "bancoestable",
+    "name": "BancoEstable",
+    "oneliner": "Open-pit bench/slope stability workbench: kinematic wedge/planar/toppling checks on a stereonet, method-of-slices factor of safety (Bishop/Spencer/Morgenstern-Price/Sarma) with Hoek-Brown/GSI rock-mass strength and pore pressure, and a Monte-Carlo probability of failure, so a slope design is judged realistic and defensible (FoS and PoF by consequence), not merely steeper.",
+    "stage": "geotechnics",
+    "solutionType": "sim",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 6,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": "synthetic slope/joint/rock-domain cases with a stamped FoS/PoF oracle; the allowable angle per domain is the geomechanical constraint PitForge consumes."
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_BancoEstable",
+      "docs": null
+    },
+    "featured": false,
+    "order": 39
+  },
+  {
+    "slug": "geotechtwin",
+    "name": "GeotechTwin",
+    "oneliner": "Knowledge-graph slope-stability twin of an open pit: benches, joints, rock domains and monitoring prisms/radar as a linked model with rule-based alerting, integrating geology, structure, groundwater and monitoring into one defensible picture.",
+    "stage": "geotechnics",
+    "solutionType": "twin",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "extended",
+    "buildWave": 7,
+    "dataVerdict": {
+      "grade": "YELLOW",
+      "note": "graph/ontology over synthetic pit benches + monitoring; rule-based alerting demonstrated on seeded scenarios."
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_GeotechTwin",
+      "docs": null
+    },
+    "featured": false,
+    "order": 40
   }
 ]
