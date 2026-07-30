@@ -2,6 +2,15 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.04.003] · 2026-07-29
+
+### Changed
+- Registry: **ChargeCascade** status `building` -> `live`. Felipe validated ChargeCascade and DispatchLab
+  as ready apps on 2026-07-29, superseding ChargeCascade's 2026-07-25 `building` decision, which predated
+  the v0.29-v0.33 work (ADR-0070 focus view, live DEM for real surveyed mills, ADR-0071 layout floor).
+  Four members are now validated ready: RotorVitals, ChancaDEM, DispatchLab (v0.23.001) and ChargeCascade
+  (v0.33.000). `live` continues to mean validated at-bar by Felipe, not merely deployed and reachable.
+
 ## [0.04.002] · 2026-07-07
 
 ### Changed
