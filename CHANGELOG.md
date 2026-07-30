@@ -2,7 +2,7 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
-## [0.04.003] · 2026-07-29
+## [0.04.004] · 2026-07-29
 
 ### Changed
 - Registry: **ChargeCascade** status `building` -> `live`. Felipe validated ChargeCascade and DispatchLab
@@ -10,6 +10,13 @@ All notable changes to this product. Format: `X.XX.XXX` (display, see the worksp
   the v0.29-v0.33 work (ADR-0070 focus view, live DEM for real surveyed mills, ADR-0071 layout floor).
   Four members are now validated ready: RotorVitals, ChancaDEM, DispatchLab (v0.23.001) and ChargeCascade
   (v0.33.000). `live` continues to mean validated at-bar by Felipe, not merely deployed and reachable.
+
+### Note on the version number
+- This release is `0.04.004`, not `0.04.003`. The tag `v0.04.003` already exists on the remote pointing at
+  commit `bf29a51`, whose own `VERSION` file reads `0.04.002`: the tag was pushed without a version bump,
+  so the number was consumed without a release behind it. A published tag is not rewritten to tidy this up,
+  so this release takes the next free number. `v0.04.003` is left as-is and should be treated as not
+  corresponding to a release.
 
 ## [0.04.002] · 2026-07-07
 
