@@ -2,6 +2,18 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.04.005] · 2026-07-30
+
+### Fixed
+- **Corrected a false statement in the 0.04.004 entry.** It said `v0.04.003` "should be treated as not
+  corresponding to a release". That is wrong. `v0.04.003` tags commit `bf29a51`, a real release: PR #61,
+  the registry status correction to 3 live / 8 building plus the MIT LICENSE swap. What actually happened is
+  that the release shipped without bumping `VERSION`, `package.json` or the CHANGELOG, so the tag was its
+  only record. The 0.04.003 entry below is reconstructed from that commit rather than left as a gap.
+- A line-wide sweep found this is the normal case, not an isolated slip: 79 tags across 9 CAOS repos point
+  at commits declaring a different version. Guarded now by
+  `tools/version-audit/check_version_coherence.py` in CAOS_MANAGE.
+
 ## [0.04.004] · 2026-07-29
 
 ### Changed
@@ -12,11 +24,20 @@ All notable changes to this product. Format: `X.XX.XXX` (display, see the worksp
   (v0.33.000). `live` continues to mean validated at-bar by Felipe, not merely deployed and reachable.
 
 ### Note on the version number
-- This release is `0.04.004`, not `0.04.003`. The tag `v0.04.003` already exists on the remote pointing at
-  commit `bf29a51`, whose own `VERSION` file reads `0.04.002`: the tag was pushed without a version bump,
-  so the number was consumed without a release behind it. A published tag is not rewritten to tidy this up,
-  so this release takes the next free number. `v0.04.003` is left as-is and should be treated as not
-  corresponding to a release.
+- This release is `0.04.004`, not `0.04.003`, because `v0.04.003` was already tagged. See the `0.04.003`
+  entry below, reconstructed after the fact: it was a real release whose `VERSION`, `package.json` and
+  CHANGELOG were never bumped, so the tag was the only record of it.
+
+## [0.04.003] · 2026-07-25
+
+> RECONSTRUCTED 2026-07-30. This release shipped without a CHANGELOG entry or a version bump: `VERSION`,
+> `package.json` and this file all stayed at `0.04.002`, so the tag `v0.04.003` on commit `bf29a51` was the
+> only record that it happened. Reconstructed from that commit's diff rather than left as a gap.
+
+### Changed
+- Registry: Felipe's status decision. Only RotorVitals, DispatchLab and ChancaDEM are `live`; the other 8
+  deployed products go back to `building`. Deployed and reachable is not the same as validated at-bar.
+- `LICENSE` replaced with MIT, matching the CAOS line standard.
 
 ## [0.04.002] · 2026-07-07
 
