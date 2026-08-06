@@ -910,17 +910,17 @@
     "adr": "ADR-0002",
     "status": "planned",
     "tier": "core",
-    "buildWave": 4,
+    "buildWave": 5,
     "dataVerdict": {
-      "grade": "GREEN",
-      "note": ""
+      "grade": "PENDING",
+      "note": "Proposed 2026-08-05. Real anchor identified (SCANIA Component X, DOI 10.5878/jvb5-d390, CC BY 4.0) but no ingestion or validation done yet."
     },
     "links": {
       "app": null,
-      "repo": "https://github.com/fsantibanezleal/CAOS_PrognosRUL",
+      "repo": null,
       "docs": null
     },
     "featured": false,
-    "order": 31
+    "order": 41
   }
 ]
