@@ -2,6 +2,24 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.05.000] · 2026-08-05
+
+### Added
+- **TruckVitals** (load-haul / cm), planned. Onset detection and prognosis on haul-truck fleet telemetry.
+  The registry had no product for truck vitals: the five asset-health entries are all single-channel
+  rotating-machinery signal analysis (PrognosRUL on bearing benchmarks, FractalWear and GearCepstrum on
+  vibration, MotorMCSA explicitly on FIXED-PLANT motors), and AssetOntoTwin names haul trucks but is an
+  IOF/BFO knowledge graph for FMEA reasoning, not a monitor.
+
+  What makes it a distinct product rather than a RotorVitals feature: every truck variable moves with
+  payload, grade, gear and ambient, so a change detector on raw channels detects the operating cycle
+  rather than a fault. Regime segmentation comes FIRST and detection runs on the within-regime residual.
+  RotorVitals never faces this because its benchmarks are constant-load.
+
+  Plan: `plans/truckvitals/plan.md`. Research: `wip/truckvitals/research-2026-08-05.md` (real anchor is
+  SCANIA Component X, DOI 10.5878/jvb5-d390, CC BY 4.0, 33,641 vehicles with 5-class
+  time-window-before-failure labels).
+
 ## [0.04.005] · 2026-07-30
 
 ### Fixed
