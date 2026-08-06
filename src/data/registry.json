@@ -900,5 +900,27 @@
     },
     "featured": false,
     "order": 40
+  },
+  {
+    "slug": "truckvitals",
+    "name": "TruckVitals",
+    "oneliner": "Onset detection and prognosis on haul-truck fleet telemetry: segment the operating regime (loaded/empty, grade, gear) FIRST, then run change-point detection on the within-regime residual, so an alarm means a developing fault and not the truck going uphill. Tyre pressure, fuel, payload, strut/suspension, temperatures and stability, with detection delay and false-alarms-per-truck-month as the metrics rather than accuracy.",
+    "stage": "load-haul",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "planned",
+    "tier": "core",
+    "buildWave": 4,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": ""
+    },
+    "links": {
+      "app": null,
+      "repo": "https://github.com/fsantibanezleal/CAOS_PrognosRUL",
+      "docs": null
+    },
+    "featured": false,
+    "order": 31
   }
 ]
