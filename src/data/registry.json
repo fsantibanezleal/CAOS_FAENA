@@ -94,7 +94,7 @@
     "stage": "mine-design",
     "solutionType": "viz",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "building",
     "tier": "core",
     "buildWave": 5,
     "dataVerdict": {
@@ -102,7 +102,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://phaseflow.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_PhaseFlow",
       "docs": null
     },
