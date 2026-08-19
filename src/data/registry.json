@@ -530,11 +530,11 @@
   {
     "slug": "stocktwin",
     "name": "StockTwin",
-    "oneliner": "Didactic near-real-time 3D stockpile that grows and erodes as synthetic haul trucks deposit and reclaim loads, tracking each cell's origin grade for reclaim traceability (open-pit stockpile pedagogy, NOT plant-level mineral tracking).",
+    "oneliner": "A run-of-mine stockpile built the way one actually is: by trucks, one load at a time, following a dump plan, on ground they must be able to climb. Measures how much the pile homogenises the feed (against the 1/N independent-layer bound), where each reclaimed tonne came from (a lot ledger that sums to one), and how much size segregation biases the cut (Gray-Thornton down a real face). Synthetic and MineLib-public data; not a blending optimizer and it emits no plant setpoint.",
     "stage": "stockpiling",
     "solutionType": "viz",
     "adr": "ADR-0054",
-    "status": "planned",
+    "status": "building",
     "tier": "core",
     "buildWave": 4,
     "dataVerdict": {
@@ -542,7 +542,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://stocktwin.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_StockTwin",
       "docs": null
     },
