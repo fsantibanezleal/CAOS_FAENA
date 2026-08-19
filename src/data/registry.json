@@ -904,21 +904,21 @@
   {
     "slug": "truckvitals",
     "name": "TruckVitals",
-    "oneliner": "Onset detection and prognosis on haul-truck fleet telemetry: segment the operating regime (loaded/empty, grade, gear) FIRST, then run change-point detection on the within-regime residual, so an alarm means a developing fault and not the truck going uphill. Tyre pressure, fuel, payload, strut/suspension, temperatures and stability, with detection delay and false-alarms-per-truck-month as the metrics rather than accuracy.",
+    "oneliner": "Onset detection on haul-truck fleet telemetry: segment the operating regime (payload, grade, speed) FIRST, then detect on the within-regime residual, so an alarm means a developing fault and not the truck going uphill. The headline is a detector-free effect size on NASA C-MAPSS, with the single-operating-condition subsets returning exactly 1.00 as a negative control; it also ships one NULL result and withdraws a claim its own data did not support.",
     "stage": "load-haul",
     "solutionType": "cm",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "building",
     "tier": "core",
     "buildWave": 5,
     "dataVerdict": {
-      "grade": "PENDING",
-      "note": "Proposed 2026-08-05. Real anchor identified (SCANIA Component X, DOI 10.5878/jvb5-d390, CC BY 4.0) but no ingestion or validation done yet."
+      "grade": "GREEN",
+      "note": "Four lanes ingested, validated and baked 2026-08-10. NASA C-MAPSS (the controlled 1-vs-6 operating-condition contrast), SCANIA APS (doi:10.24432/C51S51, cost matrix FP 10 / FN 500 read from the dataset itself), SCANIA Component X (doi:10.5878/jvb5-d390, 23,550 vehicles, downloadable anonymously) and a physically grounded synthetic fleet. No public redistributable CONTINUOUS haul-truck telemetry with labelled faults was found, which is why onset error is measured on the synthetic lane; that limitation is stated on the site."
     },
     "links": {
-      "app": null,
-      "repo": null,
-      "docs": null
+      "app": "https://truckvitals.fasl-work.com",
+      "repo": "https://github.com/fsantibanezleal/CAOS_TruckVitals",
+      "docs": "https://github.com/fsantibanezleal/CAOS_TruckVitals/tree/main/docs"
     },
     "featured": false,
     "order": 41
