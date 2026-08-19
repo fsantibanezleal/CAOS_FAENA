@@ -94,7 +94,7 @@
     "stage": "mine-design",
     "solutionType": "viz",
     "adr": "ADR-0002",
-    "status": "planned",
+    "status": "building",
     "tier": "core",
     "buildWave": 5,
     "dataVerdict": {
@@ -102,7 +102,7 @@
       "note": ""
     },
     "links": {
-      "app": null,
+      "app": "https://phaseflow.fasl-work.com",
       "repo": "https://github.com/fsantibanezleal/CAOS_PhaseFlow",
       "docs": null
     },
@@ -900,5 +900,27 @@
     },
     "featured": false,
     "order": 40
+  },
+  {
+    "slug": "truckvitals",
+    "name": "TruckVitals",
+    "oneliner": "Onset detection on haul-truck fleet telemetry: segment the operating regime (payload, grade, speed) FIRST, then detect on the within-regime residual, so an alarm means a developing fault and not the truck going uphill. The headline is a detector-free effect size on NASA C-MAPSS, with the single-operating-condition subsets returning exactly 1.00 as a negative control; it also ships one NULL result and withdraws a claim its own data did not support.",
+    "stage": "load-haul",
+    "solutionType": "cm",
+    "adr": "ADR-0002",
+    "status": "building",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": "Four lanes ingested, validated and baked 2026-08-10. NASA C-MAPSS (the controlled 1-vs-6 operating-condition contrast), SCANIA APS (doi:10.24432/C51S51, cost matrix FP 10 / FN 500 read from the dataset itself), SCANIA Component X (doi:10.5878/jvb5-d390, 23,550 vehicles, downloadable anonymously) and a physically grounded synthetic fleet. No public redistributable CONTINUOUS haul-truck telemetry with labelled faults was found, which is why onset error is measured on the synthetic lane; that limitation is stated on the site."
+    },
+    "links": {
+      "app": "https://truckvitals.fasl-work.com",
+      "repo": "https://github.com/fsantibanezleal/CAOS_TruckVitals",
+      "docs": "https://github.com/fsantibanezleal/CAOS_TruckVitals/tree/main/docs"
+    },
+    "featured": false,
+    "order": 41
   }
 ]
