@@ -380,7 +380,7 @@
     "stage": "processing",
     "solutionType": "cv",
     "adr": "ADR-0002",
-    "status": "building",
+    "status": "live",
     "tier": "flagship",
     "buildWave": 3,
     "dataVerdict": {
@@ -534,7 +534,7 @@
     "stage": "stockpiling",
     "solutionType": "viz",
     "adr": "ADR-0054",
-    "status": "building",
+    "status": "live",
     "tier": "core",
     "buildWave": 4,
     "dataVerdict": {
