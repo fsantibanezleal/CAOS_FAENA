@@ -2,6 +2,16 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.05.001] · 2026-08-18
+
+### Changed
+- Registry: **StockTwin** and **FrothSeg** flipped `building` -> `live`, per Felipe's decision that a
+  product with published content is live. Both have published LinkedIn content recorded in
+  `difusion/_products/` (StockTwin 2026-08-04 stock-characterization, FrothSeg 2026-08-04
+  domain-transfer), alongside the four already live.
+- Live members now 6: RotorVitals, DispatchLab, ChancaDEM, ChargeCascade, StockTwin, FrothSeg.
+  Building 8, planned 28.
+
 ## [0.05.000] · 2026-08-05
 
 ### Added
