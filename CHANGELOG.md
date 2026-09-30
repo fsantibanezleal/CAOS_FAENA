@@ -2,6 +2,15 @@
 
 All notable changes to this product. Format: `X.XX.XXX` (display, see the workspace `versioning.md`); stays `0.x` while pre-1.0. Tag every release.
 
+## [0.05.002] · 2026-09-30
+
+### Added
+- **OreFlow** (processing / twin), `building`: a steady-state digital twin of twelve crushing, grinding and
+  separation plants, with its app (oreflow.ml.fasl-work.com), repository and docs. Nothing on the hub led to it
+  (the OreFlow audit of 2026-09-27, CAOS_OreFlow #59). It stays `building` until it passes the adversarial
+  validation.
+- Members now 43: live 6, building 9, planned 28.
+
 ## [0.05.001] · 2026-08-18
 
 ### Changed
