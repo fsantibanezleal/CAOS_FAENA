@@ -922,5 +922,27 @@
     },
     "featured": false,
     "order": 41
+  },
+  {
+    "slug": "oreflow",
+    "name": "OreFlow",
+    "oneliner": "A steady-state digital twin of twelve crushing, grinding and separation plants: move one operating input and read recovery, grade, energy and every stream, with a constrained optimizer, uncertainty and a learned lane that run the same in the browser, and real GeoMet ore samples and iron-plant hours beside the synthetic cases.",
+    "stage": "processing",
+    "solutionType": "twin",
+    "adr": "ADR-0002",
+    "status": "building",
+    "tier": "core",
+    "buildWave": 5,
+    "dataVerdict": {
+      "grade": "GREEN",
+      "note": "Authored plants with published parameters; three open measured lanes (GeoMet, HZDR particles, Kaggle 6294), each pinned."
+    },
+    "links": {
+      "app": "https://oreflow.ml.fasl-work.com",
+      "repo": "https://github.com/fsantibanezleal/CAOS_OreFlow",
+      "docs": "https://github.com/fsantibanezleal/CAOS_OreFlow/tree/main/docs"
+    },
+    "featured": false,
+    "order": 42
   }
 ]
